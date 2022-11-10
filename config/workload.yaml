@@ -2,6 +2,7 @@ apiVersion: carto.run/v1alpha1
 kind: Workload
 metadata:
   name: customer-profile
+  namespace: team1-dev
   labels:
     apps.tanzu.vmware.com/workload-type: web
     app.kubernetes.io/part-of: customer-profile
@@ -11,9 +12,9 @@ spec:
   serviceClaims:
     - name: db
       ref:
-        apiVersion: sql.tanzu.vmware.com/v1
-        kind: Postgres
-        name: customer-profile-database
+        apiVersion: services.apps.tanzu.vmware.com/v1alpha1
+        kind: ResourceClaim
+        name: postgres-claim
   build:
     env:
       - name: BP_JVM_VERSION
@@ -25,7 +26,7 @@ spec:
     - name: testing_pipeline_matching_labels 
       value:
         apps.tanzu.vmware.com/pipeline: test
-        apps.tanzu.vmware.com/language: java
+        apps.tanzu.vmware.com/language: java-dind
     - name: api_descriptor
       value:
         type: openapi
