@@ -4,7 +4,7 @@ metadata:
   name: customer-profile
   annotations:
     "backstage.io/kubernetes-label-selector": "app.kubernetes.io/part-of=customer-profile"
-    'backstage.io/kubernetes-namespace': team1-dev
+    'backstage.io/kubernetes-namespace': dev
 spec:
   type: service
   system: customer-service
