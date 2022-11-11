@@ -32,8 +32,8 @@ spec:
         type: openapi
         location: 
           path: "/api-docs"
-        owner: user:bglover
-        system: customer
+        owner: team1
+        system: customer-service
         description: An example service
   source:
     git:
