@@ -7,8 +7,8 @@ metadata:
     'backstage.io/kubernetes-namespace': dev
 spec:
   type: service
-  system: customer-profile-tap.tanzu.xyz
+  system: customer-profile
   lifecycle: experimental
   owner: team1
   providesApis:
-    - customer-profile
+    - customer-profile-tap.tanzu.xyz
