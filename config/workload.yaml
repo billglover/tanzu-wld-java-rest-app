@@ -34,7 +34,7 @@ spec:
           path: "/api-docs"
         owner: team1
         system: customer-service
-        description: An example service
+        description: An example REST service
   source:
     git:
       ref:
